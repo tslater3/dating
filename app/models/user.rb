@@ -4,4 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_one :interest
+
+  def self.order_name
+    order(:first_name)
+  end
+
 end
