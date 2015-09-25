@@ -1,2 +1,11 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class = "center">
+<h1> Users index </h1>
+  <% @users.each do |user| %>
+    <hr /><h3>
+      <%= user.first_name %> <%= user.last_name %>
+    </h3>
+    <h5>User: <%= user.description %></h5>
+    <%= link_to 'Show User', user_path(user) %> 
+  <% end %>
+</div>
+
