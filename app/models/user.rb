@@ -10,9 +10,4 @@ class User < ActiveRecord::Base
     order(:first_name)
   end
 
-  
-  # def logged in
-  #   if user.l
-  # end
-
 end
