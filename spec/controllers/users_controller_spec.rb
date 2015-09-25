@@ -38,18 +38,43 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  describe 'PUT #update' do
+    it 'updates a user' do
+      user
+      put :update, {id: user.id, user: {first_name: 'Trevor', last_name: 'Slater', description: 'blah blah', email: 'jkadf@gmail.com', password: 'password'}}
+      user.reload
+      expect(user.first_name).to eq('Trevor')
+    end
+
+    it 'does not update user without first name' do
+      user
+      put :update, {id: user.id, user: {first_name: nil, last_name: 'Slater', description: 'blah blah', email: 'jkadf@gmail.com', password: 'password'}}
+      user.reload
+      expect(user.first_name).to eq('Mike')
+    end
+
+    it 'renders edit form again on error' do
+      user
+      put :update, {id: user.id, user: {first_name: nil, last_name: 'Slater', description: 'blah blah', email: 'jkadf@gmail.com', password: 'password'}}
+      user.reload
+      expect(response).to render_template('edit')
+    end
+  end
+
+  
   # describe "POST #create" do
 
-  #   it "creates a user" do
-  #     # expect(User.count).to eq(0)
-  #     post :create, user
-  #     expect(User.count).to eq(2)
-  #     # expect(User.last.first_name).to eq(first_name)
-  #   end
+    # it "creates a user" do
+    #   # expect(User.count).to eq(0)
+    #   expect(User.count).to eq(1)
+    #   post :create, {user: {first_name: 'Trevor', last_name: 'Slater', description: 'blah blah', email: "ldkd@kdajf.com", password: 'password'}}
+    #   expect(User.count).to eq(2)
+    #   # expect(User.last.first_name).to eq(first_name)
+    # end
+  # end
+    # it "renders new if can't create" do
 
-  #   # it "renders new if can't create" do
-
-  #   # end
+    # end
 
   # end
 

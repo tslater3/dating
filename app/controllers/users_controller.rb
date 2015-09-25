@@ -7,18 +7,19 @@ class UsersController < ApplicationController
   def show
   end
 
-  def new
-    @user = User.new
-  end
-
-  def create
-    user = User.new(user_params)
-    if user.save
-      redirect_to users_path
-    else
-      render 'new'
-    end
-  end
+  # def new
+  #   @user = User.new
+  # end
+  #
+  # def create # would be useful for admin tools
+  #   user = User.new(user_params)
+  #   binding.pry
+  #   if user.save
+  #     redirect_to users_path
+  #   else
+  #     render 'new'
+  #   end
+  # end
 
   def edit
   end
@@ -39,7 +40,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :description)
+    params.require(:user).permit(:first_name, :last_name, :description, :email, :password) #devise is requiring email and password FYI!
   end
 
   def find_user

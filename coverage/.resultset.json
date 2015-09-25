@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/environment.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/application.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/application.rb": [
         1,
         null,
         1,
@@ -45,12 +45,12 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/boot.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/environments/test.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/environments/test.rb": [
         1,
         null,
         null,
@@ -94,7 +94,7 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/initializers/assets.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -107,7 +107,7 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/initializers/backtrace_silencers.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -116,12 +116,12 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/initializers/cookies_serializer.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/initializers/devise.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -385,13 +385,13 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/initializers/filter_parameter_logging.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/initializers/inflections.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -409,18 +409,18 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/initializers/mime_types.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/initializers/session_store.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/initializers/wrap_parameters.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -436,7 +436,7 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/spec/factories/interests.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/spec/factories/interests.rb": [
         1,
         1,
         1,
@@ -447,7 +447,7 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/spec/factories/users.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/spec/factories/users.rb": [
         1,
         1,
         1,
@@ -476,7 +476,7 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/config/routes.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/config/routes.rb": [
         1,
         1,
         1,
@@ -538,12 +538,13 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/app/models/user.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/app/models/user.rb": [
         1,
         null,
         null,
         1,
         null,
+        1,
         1,
         null,
         1,
@@ -552,78 +553,78 @@
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/app/helpers/application_helper.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/app/helpers/home_helper.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/app/helpers/interests_helper.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/app/helpers/interests_helper.rb": [
         1,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/app/helpers/users_helper.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/app/controllers/users_controller.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/app/controllers/users_controller.rb": [
         1,
         1,
         1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
         0,
         null,
         null,
         1,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
         0,
         null,
         null,
         1,
-        2,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         null,
         null
       ],
-      "/Users/parkerbond/Desktop/AfterWeek4/Week6Work/dating/app/controllers/application_controller.rb": [
+      "/Users/trevorslater/Documents/Class_assignments/rspec/dating/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
-        null,
         null,
         null,
         1,
@@ -636,6 +637,6 @@
         null
       ]
     },
-    "timestamp": 1443137859
+    "timestamp": 1443188454
   }
 }
