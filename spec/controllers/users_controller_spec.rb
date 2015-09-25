@@ -61,7 +61,15 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  
+  describe 'DELETE :destroy' do
+    it 'deletes a user' do
+      user
+      delete :destroy, {id: user.id}
+      expect(User.count).to eq(0)
+    end
+  end
+
+
   # describe "POST #create" do
 
     # it "creates a user" do
