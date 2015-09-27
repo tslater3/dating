@@ -1,0 +1,34 @@
+<div class="container">
+  <h2 class="deep-purple-text text-lighten-2"> <%= @user.first_name %></h2>
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card medium">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="http://www.how-to-draw-cartoons-online.com/image-files/how-to-draw-a-heart.gif" height="250" width="42">
+          </div>
+          <div class="card-content grey lighten-2">
+            <span class="card-title activator deep-purple-text text-lighten-2">Click for more Info about <%= @user.first_name%><i class="material-icons right">more_vert</i></span>
+            <p><%= link_to 'Back to all users', users_path %></p></a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">User information<i class="material-icons right">close</i></span>
+            <p>First name: <%= @user.first_name %></p>
+            <p>Last name:<%= @user.last_name %></p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <br />
+
+  <% @interests.each do |interest|  %>
+    <p>Profession:  <%= interest.profession %></p>
+    <p>Hobbies:  <%= interest.hobbies %></p>
+    <p>Kids:  <%= interest.kids %></p>
+    <p>Likes to Party: <%= interest.party %></p>
+    <p><%= link_to 'Edit Interests', edit_user_interest_path(interest, @user) %></p>
+    <p><%= link_to 'Delete Interests', user_interest_path(current_user, interest), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+
+  <br>
+  <p><%= link_to 'Add Interests', new_user_interest_path(@user) %></p><br>
+</div>
