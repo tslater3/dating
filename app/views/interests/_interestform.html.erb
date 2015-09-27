@@ -1,0 +1,25 @@
+<% if params[:action] == 'new'
+     go_to = user_interests_path(params[:user_id])
+  else
+    go_to = user_interest_path(params[:user_id], params[:id])
+  end %>
+<%= form_for @interest, url: go_to do |f| %>
+  <%= f.label :profession %>
+  <%= f.text_field :profession %>
+
+  <%= f.label :hobbies %>
+  <%= f.text_field :hobbies %>
+
+  <%= f.label :kids %>
+  <%= f.text_field :kids %>
+
+  <%= f.radio_button :party, true %>
+  <%= f.label :party, 'Do you like to party?' %>
+
+  <%= f.radio_button :party, false %>
+  <%= f.label :party, 'No party for you' %>
+  <br />
+
+  <%= f.hidden_field :user_id, value: params[:user_id] %>
+  <%= f.submit 'Submit' %>
+<% end %>

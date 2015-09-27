@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :find_user, only: [:show, :edit, :update, :destroy]
   def index
-    @users = User.all
+    @users = User.all.by_name
   end
 
   def show
@@ -40,9 +40,9 @@ class UsersController < ApplicationController
 
   private
 
-  def user_params
-    params.require(:user).permit(:first_name, :last_name, :description, :email, :password) #devise is requiring email and password FYI!
-  end
+  # def user_params
+  #   params.require(:user).permit(:first_name, :last_name, :description, :email, :password) #devise is requiring email and password FYI!
+  # end
 
   def find_user
     @user = User.find(params[:id])

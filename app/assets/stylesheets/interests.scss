@@ -1,3 +1,18 @@
 // Place all the styles related to the interests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+background-image: url("http://www.psdgraphics.com/file/hearts-background.jpgf");
+}
+
+.interests {
+  font-size: 200% !important;
+}
+
+.interests-links a {
+  color: black !important;
+}
+
+.interests-links a:hover {
+  color: white !important;
+}

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'interests/index'
+
+  get 'interests/show'
+
+  get 'interests/edit'
+
+  get 'interests/new'
+
   devise_for :users, :path => 'accounts'
 
   resources :users do

@@ -6,8 +6,13 @@ class User < ActiveRecord::Base
   has_one :interest, dependent: :destroy
   validates_presence_of :first_name
 
-  def self.order_name
+  def self.by_name
     order(:first_name)
   end
+
+  
+  # def logged in
+  #   if user.l
+  # end
 
 end
