@@ -1,1 +1,16 @@
-
+<div class="row">
+  <div class="col s10 offset-s1">
+    <div class="card medium blue lighten-3">
+      <div class="card-content white-text">
+        <span class="card-title red-text"><%= current_user.first_name %> Interests:</span>
+        <p class=interests>
+          Profession:  <%= @interest.profession %>
+          Hobbies:  <%= @interest.hobbies %>
+          Kids:  <%= @interest.kids %>
+      </div>
+      <div class="card-action">
+        <p class='btn interests-links'><%= link_to 'Edit your profile interests', edit_user_interest_path(current_user, @interest) %></p>
+      </div>
+    </div>
+  </div>
+</div>
