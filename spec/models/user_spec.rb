@@ -10,13 +10,10 @@ RSpec.describe User, type: :model do
       it { should respond_to :password}
   end
 
-
-
-
   it 'sorts users by first name' do
     user1 = FactoryGirl.create(:user)
     user2 = FactoryGirl.create(:user, :spanish)
-    users = User.order_name
+    users = User.by_name
     expect(users[0].first_name).to eq("Juan")
     expect(users[1].first_name).to eq("Mike")
 

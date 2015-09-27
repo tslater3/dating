@@ -9,10 +9,13 @@ Rails.application.routes.draw do
 
   devise_for :users, :path => 'accounts'
 
+  get "users/:id/vote" => "users#vote", as: :upvote
+  get 'users/:id/unvote' => 'users#unvote',as: :downvote
 
   resources :users do
     resources :interests
   end
+
 
   root to: 'users#index'
 

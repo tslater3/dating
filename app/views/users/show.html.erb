@@ -9,6 +9,8 @@
           <span class="card-title activator deep-purple-text text-lighten-2">Click for more Info about <%= @user.first_name%><i class="material-icons right">more_vert</i></span>
           <!-- <p><a href="#"><pECHO link_to 'Show all interests for user', user_interests_path(params[:id]) %></p> -->
           <p><%= link_to 'Back to all users', users_path %></p></a></p>
+          <br />
+          <p> Total Likes: <%= @user.votes %></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">User information<i class="material-icons right">close</i></span>
@@ -23,22 +25,13 @@
 </div>
 <br />
 
-<!-- <div class="row">
-  <div class="col s10 offset-s1">
-    <div class="card medium blue lighten-3">
-      <div class="card-content white-text">
-        <span class="card-title red-text"><%= current_user.first_name %> Interests:</span> -->
-        <!-- <p class=interests> -->
         <% @interests.each do |interest|  %>
           <p>Profession:  <%= interest.profession %></p>
           <p>Hobbies:  <%= interest.hobbies %></p>
           <p>Kids:  <%= interest.kids %></p>
           <p><%= link_to 'Edit Interests', edit_user_interest_path(interest, @user) %></p>
           <% end %>
-      <!-- </div>
-      <div class="card-action">
-        <p class='btn interests-links'><ECHO= link_to 'Edit your profile interests', edit_user_interest_path(current_user, @interests) %></p>
-      </div>
-    </div>
-  </div>
-</div> -->
+        <div class="row">
+          <span id='upvote' class="waves-effect waves-light btn"><%=link_to 'Like', upvote_path(params[:id]) %></span>
+          <span id='downvote' class="waves-effect waves-light btn"><%=link_to 'Unlike', downvote_path(params[:id]) %></span>
+        </div>

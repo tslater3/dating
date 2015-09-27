@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
 
   let(:user){FactoryGirl.create(:user)}
-
+  # let(:spanish){FactoryGirl.create(:user, trait :spanish)}
   before(:each) do
     sign_in user
   end
@@ -67,6 +67,20 @@ RSpec.describe UsersController, type: :controller do
       delete :destroy, {id: user.id}
       expect(User.count).to eq(0)
     end
+  end
+
+  describe 'GET #vote' do
+    it 'adds to vote' do
+      get :vote, {id: user.id}
+      expect(User.first.votes).to eq(1)
+    end
+
+    it 'subtracts from vote' do
+      get :unvote, {id: user.id}
+      expect(User.first.votes).to eq(-1)
+    end
+
+
   end
 
 

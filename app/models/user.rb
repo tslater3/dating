@@ -10,4 +10,25 @@ class User < ActiveRecord::Base
     order(:first_name)
   end
 
+  # def females_only
+  #
+  # end
+  #
+  # def males_only
+  #
+  # end
+
+#   def upvote
+#    @post = Post.find(params[:id])
+#    @post.vote += 1
+#    @post.save!
+#    redirect_to root_path
+#  end
+#
+#  def downvote
+#    @post = Post.find(params[:id])
+#    @post.vote += -1
+#    @post.save!
+#    redirect_to root_path
+#  end
 end

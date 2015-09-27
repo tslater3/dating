@@ -5,6 +5,8 @@ FactoryGirl.define do
     description "I love long walks on the beach."
     email "somemail@some.com"
     password "pass1234"
+    gender 'male'
+    votes 0
 
     trait :spanish do
       first_name "Juan"
@@ -12,6 +14,8 @@ FactoryGirl.define do
       description "Te Amo mi amor"
       email "anymail1@any.com"
       password "Password1"
+      gender 'male'
+      votes 2
     end
 
     trait :english do
@@ -20,6 +24,8 @@ FactoryGirl.define do
       description "Te Amo mi amor"
       email "anymail2@any.com"
       password "Password2"
+      gender 'male'
+      votes 0
     end
 
   end
