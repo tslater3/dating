@@ -18,13 +18,17 @@ class UsersController < ApplicationController
     redirect_to user_path(id: params[:id])
   end
 
-
-
   def show
     @user = User.find(params[:id])
     @interests = Interest.where(user_id: params[:id])
   end
 
+  def profile
+    @user = User.find(current_user)
+    # @user = User.find(params[:id])
+    # @interests = Interest.where(user_id: params[:id])
+    @interests = Interest.where(user_id: current_user)
+  end
 
   private
 

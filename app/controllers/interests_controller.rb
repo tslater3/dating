@@ -7,8 +7,8 @@ class InterestsController < ApplicationController
 
   def new
     @user = User.find(params[:user_id])
-    @interest = @user.interests.new
-    # @interest = Interest.new(user_id: params[:user_id])
+    # @interest = @user.interests.new
+    @interest = Interest.new(user_id: params[:user_id])
   end
   # def new
   #   @post = Post.find(params[:post_id])
@@ -16,9 +16,9 @@ class InterestsController < ApplicationController
   # end
 
   def create
-    # @interest = Interest.new(interest_params)
+    @interest = Interest.new(interest_params)
     @user = User.find(params[:user_id])
-    @interest = Interest.new(params[:id])
+    # @interest = Interest.new(params[:id])
     if @interest.save
       redirect_to user_path(@user)
       # redirect_to user_interests_path(user_id: params[:user_id])
@@ -26,24 +26,11 @@ class InterestsController < ApplicationController
       render :new
     end
   end
-  # def create
-  #   @post = Post.find(params[:post_id])
-  #   @comment = Comment.new(params[:id])
-  #   if @comment.save
-  #     redirect_to post_path(@post)
-  #   else
-  #     render :new
-  #   end
-  # end
 
   def edit
     @user = User.find(params[:id])
     @interest = Interest.find(params[:user_id])
   end
-  # def edit
-  #   @post = Post.find(params[:id])
-  #   @comment = Comment.find(params[:post_id])
-  # end
 
   def update
     @user = User.find(params[:user_id])
@@ -55,15 +42,16 @@ class InterestsController < ApplicationController
       render :edit
     end
   end
-  # def update
-  #   @post = Post.find(params[:post_id])
-  #   @comment = Comment.find(params[:id])
-  #   if @comment.update(comment_params)
-  #     redirect_to post_path(@post)
-  #   else
-  #     render :edit
-  #   end
-  # end
+
+  def destroy
+    @user = User.find(current_user)
+    @interest = Interest.find(params[:id])
+    if @interest.destroy
+      redirect_to root_path
+    else
+      redirect_to user_path(@user)
+    end
+  end
 
   private
 

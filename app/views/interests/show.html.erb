@@ -1,4 +1,4 @@
-<div class="row">
+<p>If you arrived at this page we didn't do something right.</p><!-- <div class="row">
   <div class="col s10 offset-s1">
     <div class="card medium blue lighten-3">
       <div class="card-content white-text">
@@ -9,8 +9,46 @@
           Kids:  <%= @interest.kids %>
       </div>
       <div class="card-action">
-        <p class='btn interests-links'><%= link_to 'Edit your profile interests', edit_user_interest_path(current_user, @interest) %></p>
+        <p class='btn interests-links'><ECHO= link_to 'Edit your profile interests', edit_user_interest_path(current_user, @interest) %></p>
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+
+<%= f.label :autolyse %><br />
+<%= f.label :autolyse, "Yes", :value => "true"  %>
+<%= f.radio_button :autolyse, true %>
+<%= f.label :autolyse, "No", :value => "false" %>
+<%= f.radio_button :autolyse, false, :checked => true %>
+
+<%= radio_button_tag(:age, "child") %>
+<%= label_tag(:age_child, "I am younger than 21") %>
+<%= radio_button_tag(:age, "adult") %>
+<%= label_tag(:age_adult, "I'm over 21") %>
+
+<% if params[:action] == 'new'
+     go_to = user_interests_path(params[:user_id])
+  else
+    go_to = user_interest_path(params[:user_id], params[:id])
+  end %>
+<%= form_for @interest, url: go_to do |f| %>
+  <%= f.label :profession %>
+  <%= f.text_field :profession %>
+
+  <%= f.label :hobbies %>
+  <%= f.text_field :hobbies %>
+
+  <%= f.label :kids %>
+  <%= f.text_field :kids %>
+
+  <%= f.radio_button :party, true %>
+  <%= f.label :party, 'Do you like to party?' %>
+
+  <%= f.radio_button :party, false %>
+  <%= f.label :party, 'No party for you' %>
+  <br />
+
+  <%= f.hidden_field :user_id, value: params[:user_id] %>
+  <%= f.submit 'Submit' %>
+<% end %>
