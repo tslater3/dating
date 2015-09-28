@@ -1,13 +1,25 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-background-image: url("http://thumbs.dreamstime.com/z/hearts-background-4193373.jpg");
+  background-color: #0d47a1;
 }
-
+// navbar
+.hmenu {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+.head-info {
+  margin-bottom: 0 !important;
+}
+//
+.show-prof a {
+  margin-top: 0 !important;
+}
+#show-prof {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 #show-prof a {
-  color: #9575cd !important;
-  font-size: 300%;
+  color: white !important;
+  font-size: 150%;
 }
 
 #show-user a {
@@ -23,6 +35,13 @@ background-image: url("http://thumbs.dreamstime.com/z/hearts-background-4193373.
   color: white !important;
 }
 
+.back-to-index a{
+  color: white !important;
+}
+
+.add-interests a {
+  color: white !important;
+}
 // @keyframes example {
 //     from {background-color: red;}
 //     to {background-color: yellow;}

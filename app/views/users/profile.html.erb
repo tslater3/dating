@@ -1,14 +1,14 @@
 <div class="container">
-  <h2 class="deep-purple-text text-lighten-2"> <%= @user.first_name %></h2>
+  <h2 class="amber-text text-accent-3"> <%= @user.first_name %></h2>
   <div class="row">
     <div class="col s12 m4">
       <div class="card medium">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="http://www.how-to-draw-cartoons-online.com/image-files/how-to-draw-a-heart.gif" height="250" width="42">
           </div>
-          <div class="card-content grey lighten-2">
-            <span class="card-title activator deep-purple-text text-lighten-2">Click for more Info about <%= @user.first_name%><i class="material-icons right">more_vert</i></span>
-            <p><%= link_to 'Back to all users', users_path %></p></a></p>
+          <div class="card-content blue darken-2">
+            <span class="card-title activator amber-text text-accent-3">Click for more Info about <%= @user.first_name%><i class="material-icons right">more_vert</i></span>
+            <p class="back-to-index"><%= link_to 'Back to all users', users_path %></p>
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">User information<i class="material-icons right">close</i></span>
@@ -18,17 +18,16 @@
         </div>
     </div>
   </div>
-  <br />
 
   <% @interests.each do |interest|  %>
-    <p>Profession:  <%= interest.profession %></p>
-    <p>Hobbies:  <%= interest.hobbies %></p>
-    <p>Kids:  <%= interest.kids %></p>
-    <p>Likes to Party: <%= interest.party %></p>
-    <p><%= link_to 'Edit Interests', edit_user_interest_path(interest, @user) %></p>
-    <p><%= link_to 'Delete Interests', user_interest_path(current_user, interest), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p class="amber-text text-accent-3">Profession:  <%= interest.profession %></p>
+    <p class="amber-text text-accent-3">Hobbies:  <%= interest.hobbies %></p>
+    <p class="amber-text text-accent-3">Kids:  <%= interest.kids %></p>
+    <p class="amber-text text-accent-3">Likes to Party: <%= interest.party %></p>
+    <div class="row">
+      <span id="edit-interests" class="edit-interests white-text left waves-effect waves-light btn small"><i class="material-icons left">info</i><%= link_to 'Edit Interests', edit_user_interest_path(interest, @user) %></span>
+      <span id="delete-interests" class="delete-interests white-text left waves-effect waves-light btn small"><i class="material-icons left">delete</i><%= link_to 'Delete Interests', user_interest_path(current_user, interest), method: :delete, data: { confirm: 'Are you sure?' } %></span>
+    </div>
   <% end %>
-
-  <br>
-  <p><%= link_to 'Add Interests', new_user_interest_path(@user) %></p><br>
+  <p class="add-interests"><%= link_to 'Add Interests', new_user_interest_path(@user) %></p><br>
 </div>

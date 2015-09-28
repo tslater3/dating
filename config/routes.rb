@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get 'interests/new'
 
   get 'users/profile'  #do we really need the above?
-  
-  devise_for :users, :path => 'accounts'
+
+  devise_for :users
 
   get "users/:id/vote" => "users#vote", as: :upvote
   get 'users/:id/unvote' => 'users#unvote',as: :downvote

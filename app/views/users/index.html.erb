@@ -1,25 +1,27 @@
-<h2 class="center">Check our all our users!</h2>
-<br />
-<br />
-<br />
-  <div class="row">
-    <!-- <a id='show-profile' class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>put in show profile link</a> -->
-    <p id="show-prof"><%= link_to 'Show profile', users_profile_path(current_user) %></p>
-    <hr />
-  </div>
+<div class="head-info row blue darken-4">
+    <br />
+    <br />
+      <h2 class="center amber-text text-accent-3">Check our all our users!</h2>
+    <br />
+    <br />
+    <br />
 </div>
+  <div class="show-prof row blue darken-4">
+    <p id="show-prof" class="show-prof amber-text text-accent-3 left waves-effect waves-light btn-large"><i class="material-icons left">cloud</i><%= link_to 'Show Profile', users_profile_path(current_user)%></p>
+  </div>
+
   <div class ="container">
     <div class ="row">
       <% @users.each do |user| %>
         <div class='col s12 m4'>
-          <div class="card small blue lighten-3">
-            <div class="card-content white-text">
-              <span class="card-title red-text"> <%= user.first_name %>'s Info:</span>
+          <div class="card small white">
+            <div class="black-text">
+              <span class="card-title amber-text text-accent-3"> <%= user.first_name %>'s Info:</span>
               <p> First Name: <%= user.first_name %></p>
               <p> Last Name: <%= user.last_name %></p>
               <p> Description: <%= user.description %></p>
               <p> Gender: <%= user.gender %></p>
-              <div class='card-action'>
+              <div class='card-action center blue darken-2'>
                 <p id="show-user" class='btn tooltipped' data-position='right' data-delay='50' data-tooltip='Click to interact with <%= user.first_name%>'><%= link_to 'User\'s profile', user_path(user) %></p>
             </div>
             </div>

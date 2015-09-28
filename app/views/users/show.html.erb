@@ -1,15 +1,14 @@
 <div class="container offset-1">
-  <h2 class="deep-purple-text text-lighten-2"> <%= @user.first_name %></h2>
+  <h2 class="amber-text text-accent-3"> <%= @user.first_name %></h2>
   <div class="row">
     <div class="col s12 m4">
-      <div class="card medium">
+      <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="http://www.how-to-draw-cartoons-online.com/image-files/how-to-draw-a-heart.gif" height="250" width="42">
         </div>
-        <div class="card-content grey lighten-2">
-          <span class="card-title activator deep-purple-text text-lighten-2">Click for more Info about <%= @user.first_name%><i class="material-icons right">more_vert</i></span>
-          <!-- <p><a href="#"><pECHO link_to 'Show all interests for user', user_interests_path(params[:id]) %></p> -->
-          <p><%= link_to 'Back to all users', users_path %></p></a></p>
+        <div class="card-content blue darken-2">
+          <span class="card-title activator amber-text text-accent-3">Click for more Info about <%= @user.first_name%><i class="material-icons right">more_vert</i></span>
+          <p class="back-to-index"><%= link_to 'Back to all users', users_path %></p>
           <p> Total Likes: <%= @user.votes %></p>
         </div>
         <div class="card-reveal">
@@ -18,16 +17,16 @@
           <p>Last name:<%= @user.last_name %></p>
         </div>
       </div>
+          <% @interests.each do |interest|  %>
+            <span class="amber-text text-accent-3">Profession:  <%= interest.profession %></p>
+            <span class="amber-text text-accent-3">Hobbies:  <%= interest.hobbies %></p>
+            <span class="amber-text text-accent-3">Kids:  <%= interest.kids %></p>
+            <span class="amber-text text-accent-3">Likes to Party: <%= interest.party %></p>
+          <% end %>
     </div>
   </div>
   <br />
 
-  <% @interests.each do |interest|  %>
-    <p>Profession:  <%= interest.profession %></p>
-    <p>Hobbies:  <%= interest.hobbies %></p>
-    <p>Kids:  <%= interest.kids %></p>
-    <p>Likes to Party: <%= interest.party %></p>
-  <% end %>
 
   <div class="row">
     <span id='upvote' class="waves-effect waves-light btn"><%=link_to 'Like', upvote_path(params[:id]) %></span>
@@ -35,4 +34,3 @@
   </div>
 
 </div>
-
